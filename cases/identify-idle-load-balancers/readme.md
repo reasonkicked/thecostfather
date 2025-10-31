@@ -31,3 +31,13 @@ pip install duckdb>=1.0.0
 
 python tools/cur_to_fixture.py --cur-dir cur_raw --fixtures-dir fixtures --synthesize-lb-fixtures
 
+
+python tools/identify_idle_elb.py \
+  --regions eu-west-1 \
+  --cost-from-fixture fixtures/athena_cost.csv \
+  --account-map fixtures/accounts.csv \
+  --lookback-hours 336 \
+  --cost-threshold 0 \
+  --output out/idle_elb_online.csv
+Wrote 0 idle LBs → out/idle_elb_online.csv
+

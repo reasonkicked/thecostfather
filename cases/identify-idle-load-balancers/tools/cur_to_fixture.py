@@ -23,8 +23,11 @@ def arn_parts(arn):
 def pick(cols, candidates, required=False, default=None):
     for c in candidates:
         if c in cols: return c
+        for cc in cols:
+            if cc.lower() == c.lower():
+                return cc
     if required:
-        raise SystemExit(f"Missing required column. Tried: {candidates}, found: {sorted(cols)[:30]} ...")
+        raise SystemExit(f"Missing required column. Tried: {candidates}, found: {sorted(cols)[:50]} ...")
     return default
 
 def synthesize_lb_fixtures(rows_csv_path, out_dir):
@@ -96,7 +99,6 @@ def main():
     fmt = detect_format(args.cur_dir)
 
     # Spill to disk / tame memory
-    import shutil
     spill_dir = os.path.join('.duckdb_tmp')
     if os.path.exists(spill_dir):
         shutil.rmtree(spill_dir)
@@ -112,7 +114,7 @@ def main():
     except Exception:
         pass
 
-    # Build a scan source via TEMP VIEW (no nested parentheses)
+    # Materialize a TEMP VIEW for the whole month (glob)
     if fmt == 'parquet':
         src_sql = f"SELECT * FROM read_parquet('{args.cur_dir}/**/*.parquet')"
     elif fmt == 'csv.gz':
@@ -123,21 +125,10 @@ def main():
     con.execute("DROP VIEW IF EXISTS cur_src;")
     con.execute(f"CREATE TEMP VIEW cur_src AS {src_sql};")
 
-    # Inspect available columns (case sensitive)
+    # Introspect available columns
     cols = {r[1] for r in con.execute("PRAGMA table_info('cur_src')").fetchall()}
 
-    # Map actual column names present in your CUR
-    def pick(cols, candidates, required=False, default=None):
-        for c in candidates:
-            if c in cols: return c
-            # try case-insensitive
-            for cc in cols:
-                if cc.lower() == c.lower():
-                    return cc
-        if required:
-            raise SystemExit(f"Missing required column. Tried: {candidates}, found: {sorted(cols)[:50]} ...")
-        return default
-
+    # Map column names present in your CUR
     product_code_col   = pick(cols, ['line_item_product_code','productcode','product_servicecode','product_service_code'], required=True)
     resource_id_col    = pick(cols, ['line_item_resource_id','resourceid','resource_id'], required=True)
     usage_acct_col     = pick(cols, ['line_item_usage_account_id','usageaccountid','usage_account_id','bill_payer_account_id','payer_account_id'], required=True)
@@ -179,7 +170,6 @@ ORDER BY 5 DESC
     os.makedirs(args.fixtures_dir, exist_ok=True)
     out_csv = os.path.join(args.fixtures_dir, 'athena_cost.csv')
 
-    # COPY to CSV
     con.execute(f"COPY ({sql_stmt}) TO '{out_csv}' WITH (HEADER, DELIMITER ',');")
     print(f"Wrote cost fixture → {out_csv}")
 
