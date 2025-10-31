@@ -1,0 +1,100 @@
+I'm starting with development. First I need to automate Identify Idle Load Balancer. I assume all operations I will run from my local terminal, being logged into aws with administratoraccess. I'm copying existing solution, please organize it and add what am I missing, you need to think as a principal cloud architect:
+
+Entry
+lookback_period
+336 (Optional)
+Idle hours threshold (e.g., 336 hours)
+
+cost_threshold
+0 (optional)
+Defines minimum amount to create case
+
+SELECT
+  line_item_usage_account_id AS "Account Id",
+  product_region AS "Region",
+  line_item_resource_id AS "Resource Id",
+  sum_line_item_usage_amount AS "Monthly Usage Hours",
+  ROUND(CAST(cost_per_resource AS DECIMAL(16, 8)) * 12) AS "Annual Saving"
+FROM
+  (
+    SELECT
+      line_item_resource_id,
+      product_region,
+      pricing_unit,
+      line_item_usage_account_id,
+      SUM(line_item_usage_amount) AS sum_line_item_usage_amount,
+      SUM(SUM(line_item_unblended_cost)) OVER (PARTITION BY line_item_resource_id) AS cost_per_resource,
+      SUM(SUM(line_item_usage_amount)) OVER (PARTITION BY line_item_resource_id, pricing_unit) AS usage_per_resource_and_pricing_unit,
+      COUNT(pricing_unit) OVER (PARTITION BY line_item_resource_id) AS pricing_unit_per_resource
+    FROM
+      wivdb.wiv_cur
+    WHERE
+      line_item_product_code = 'AWSELB'
+      AND month = CAST(month(current_timestamp - INTERVAL '1' MONTH) AS VARCHAR)
+      AND year = CAST(year(current_timestamp - INTERVAL '1' MONTH) AS VARCHAR)
+      AND line_item_line_item_type = 'Usage'
+    GROUP BY
+      line_item_resource_id,
+      product_region,
+      line_item_usage_type,
+      pricing_unit,
+      line_item_usage_account_id,
+      bill_payer_account_id
+  ) AS subquery
+WHERE
+  usage_per_resource_and_pricing_unit > {{Entry.output.lookback_period}}
+  AND pricing_unit_per_resource = 1
+ORDER BY
+  cost_per_resource DESC;
+
+CUR Region Location
+us-east-1
+
+Get_all_ELB_v2
+
+Regions
+All Regions (28)
+
+Continue Workflow On Error On
+aws elbv2 describe-load-balancers
+
+Get_all_ELB
+Regions
+All Regions (28)
+Continue Workflow On Error On
+aws elb describe-load-balancers
+
+Transform Data
+
+{"stepTemplateId":"AI-001","name":"Transform Data","parameters":[{"id":"AI-001-P1","type":"transform-data","value":{"prompt":"Based on LoadBalancerArn/Resource Id, return a new list in the following structure: \nAccount Id (AwsAccountId)\nAccount Name (AwsAccountName)\nRegion (Region)\nResource Id (LoadBalancerArn)\nResource Name (LoadBalancerName)\nScheme\nType\nVPC Id\nAvailability Zones (the AvailabilityZones list) \nCreated Time\nSecurity Groups (List of SecurityGroups)","styling":{"logo":""},"variables":[{"path":"{{Get_Idle_ELB.output}}"},{"path":"{{Get_all_ELB.output}}"},{"path":"{{Entry.output}}"},{"path":"{{Get_all_ELB_v2.output}}"}]}},{"id":"AI-001-P2","type":"multiline","value":"def process_load_balancers(load_balancer_data_list, idle_data):\n    result = []\n    \n    # Create a dictionary to quickly look up load balancer details\n    lb_lookup = {}\n    for load_balancer_data in load_balancer_data_list:\n        account_id = load_balancer_data.get(\"AwsAccountId\", \"\")\n        account_name = load_balancer_data.get(\"AwsAccountName\", \"\")\n        region = load_balancer_data.get(\"Region\", \"\")\n        \n        if \"data\" in load_balancer_data:\n            # Handle LoadBalancers (ELB v2)\n            if load_balancer_data[\"data\"].get(\"LoadBalancers\"):\n                for lb in load_balancer_data[\"data\"].get(\"LoadBalancers\", []):\n                    resource_id = lb.get(\"LoadBalancerArn\", \"\")\n                    lb_lookup[resource_id] = {\n                        \"account_id\": account_id,\n                        \"account_name\": account_name,\n                        \"region\": region,\n                        \"lb_data\": lb,\n                        \"is_v2\": True\n                    }\n            \n            # Handle LoadBalancerDescriptions (Classic ELB)\n            elif load_balancer_data[\"data\"].get(\"LoadBalancerDescriptions\"):\n                for lb in load_balancer_data[\"data\"].get(\"LoadBalancerDescriptions\", []):\n                    lb_name = lb.get(\"LoadBalancerName\", \"\")\n                    \n                    # Construct ARN for classic ELB\n                    # Format: arn:aws:elasticloadbalancing:{region}:{account_id}:loadbalancer/{name}\n                    constructed_arn = f\"arn:aws:elasticloadbalancing:{region}:{account_id}:loadbalancer/{lb_name}\"\n                    \n                    lb_lookup[constructed_arn] = {\n                        \"account_id\": account_id,\n                        \"account_name\": account_name,\n                        \"region\": region,\n                        \"lb_data\": lb,\n                        \"is_v2\": False\n                    }\n    \n    # Process only items in idle_data that exist in load_balancer_data_list\n    for idle_item in idle_data:\n        resource_id = idle_item.get(\"Resource Id\", \"\")\n        if resource_id in lb_lookup:\n            lb_info = lb_lookup[resource_id]\n            lb_data = lb_info[\"lb_data\"]\n            is_v2 = lb_info[\"is_v2\"]\n            \n            lb_entry = {\n                \"Account Id\": lb_info[\"account_id\"],\n                \"Account Name\": lb_info[\"account_name\"],\n                \"Region\": lb_info[\"region\"],\n                \"Resource Id\": resource_id,\n                \"Entry Parameters\": {{Entry.output}},\n                \"Annual Saving\": idle_item.get(\"Annual Saving\", \"\"),\n                \"Monthly Usage Hours\": idle_item.get(\"Monthly Usage Hours\", \"\")\n            }\n            \n            # Add fields based on the ELB type\n            if is_v2:\n                lb_entry.update({\n                    \"Resource Name\": lb_data.get(\"LoadBalancerName\", \"\"),\n                    \"Scheme\": lb_data.get(\"Scheme\", \"\"),\n                    \"Type\": lb_data.get(\"Type\", \"\"),\n                    \"VPC Id\": lb_data.get(\"VpcId\", \"\"),\n                    \"Availability Zones\": lb_data.get(\"AvailabilityZones\", []),\n                    \"Created Time\": lb_data.get(\"CreatedTime\", \"\"),\n                    \"Security Groups\": lb_data.get(\"SecurityGroups\", [])\n                })\n            else:\n                # Handle differences in field names for classic ELB\n                lb_entry.update({\n                    \"Resource Name\": lb_data.get(\"LoadBalancerName\", \"\"),\n                    \"Scheme\": lb_data.get(\"Scheme\", \"\"),\n                    \"Type\": \"classic\",\n                    \"VPC Id\": lb_data.get(\"VPCId\", \"\"),  # Note the capitalization difference\n                    \"Availability Zones\": lb_data.get(\"AvailabilityZones\", []),\n                    \"Created Time\": lb_data.get(\"CreatedTime\", \"\"),\n                    \"Security Groups\": lb_data.get(\"SecurityGroups\", [])\n                })\n            \n            result.append(lb_entry)\n    \n    return result\n\nload_balancer_data = {{Get_all_ELB_v2.output}} + {{Get_all_ELB.output}}\nidle_data = {{Get_Idle_ELB.output}}\nreturn process_load_balancers(load_balancer_data, idle_data)\n"}],"group":"UTILITIES","subgroup":"AI","type":"ACTION","id":"-1","title":"Data Transform"}
+
+Write Cases (this is for Wiv's dashboards, we need to present final data, it can be table or just csv up to you)
+Case Type
+Idle Load Balancers
+Case Group Type
+Idle Resource
+Service Group
+Network
+Service
+Other
+Elastic Load Balancer
+Criteria
+Identify Elastic Load Balancers that did not receive any traffic last month and ran for more than [14] days (336 hours)
+
+Case Effort
+Low
+
+Annual Potential Savings Field Name
+Annual Saving
+Account ID Field Name
+Account Id
+Region Field Name
+Region
+Resource ID Field Name
+Resource Id
+Cases Data
+(data from previous step) {{Transform_Data.output}}
+Minimum Annual Saving (dollars)
+﻿
+Entry: cost_threshold
+﻿

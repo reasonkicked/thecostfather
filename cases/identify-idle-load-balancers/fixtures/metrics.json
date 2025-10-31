@@ -1,0 +1,192 @@
+{
+  "app/tetris-alb/cf0a8732fde52184": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/ak-alb-poc-llm/ece8e52a1e4f7ca6": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/app-lb/e68793179fbd4e95": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/xaia-ai-dev/673ddb282fde3f59": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/xaia-ai-prod/0ae67d33954f2b66": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/dev-xmod-lb/aefe2c5d23037f81": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/prod-xmod-lb/2e2739ddd7df50e0": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/Bedroc-Proxy-HnegKHBZTaGm/739f49e5a8ff843a": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/breeze-ai-alb/56fa3f99addef871": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/geotpoc-auto-alb-main/07dc88d6fb516591": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/ALB-lkowalczuk/216e4f9c16f11408": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/geot-sbx-public-alb/ad4ea26b064f0645": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/ALB-lkowalczuk/85d3065695150ff6": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "net/ALB-OK-lkowalczuk/aeed836e04a20553": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/To-RDS-lkowalczuk/b201f1bfdd4f3dab": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/dev-xmod-lb/3434cca696015140": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "net/network-to-ecs-RDS-Lkow/1d63426787cd28d1": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/361d1755296a9ff9": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/1ea1ae7fb78ffb7f": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "net/ALB-OK/782c9ddd7907ccdd": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/ALB-lkowalczuk/72e0af376dcfec9d": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-dev-alb/f95966ff70c9d203": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-dev-alb/72636ffdde73cfef": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/ce89072739908e70": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/5125dc87cf5b49ed": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/fb38e622e62c599e": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/4387423951224d72": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/ddcacd4f7dea05cc": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/1053931024daa7f4": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/4e9e1a786ad88323": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/012da7cb62039d74": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/9ef5412f295ef70e": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/f842b4330fc87daf": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/da4ab82135b98a8c": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/f44a7e76d9732433": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/773c9368736b0ebb": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-default-alb/4392b5a68291e16c": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  },
+  "app/krawski-prod-alb/42b588de78340ae6": {
+    "RequestCountSum": 0,
+    "ProcessedBytesSum": 0,
+    "ActiveFlowCountAverage": 0.0
+  }
+}

@@ -1,0 +1,724 @@
+{
+  "Regions": [
+    {
+      "Region": "eu-west-3",
+      "LoadBalancers": [
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:061670163066:loadbalancer/app/tetris-alb/cf0a8732fde52184",
+          "LoadBalancerName": "tetris-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/app/ALB-lkowalczuk/216e4f9c16f11408",
+          "LoadBalancerName": "ALB-lkowalczuk",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/app/ALB-lkowalczuk/85d3065695150ff6",
+          "LoadBalancerName": "ALB-lkowalczuk",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/net/ALB-OK-lkowalczuk/aeed836e04a20553",
+          "LoadBalancerName": "ALB-OK-lkowalczuk",
+          "Scheme": "internet-facing",
+          "Type": "network",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/app/To-RDS-lkowalczuk/b201f1bfdd4f3dab",
+          "LoadBalancerName": "To-RDS-lkowalczuk",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/net/network-to-ecs-RDS-Lkow/1d63426787cd28d1",
+          "LoadBalancerName": "network-to-ecs-RDS-Lkow",
+          "Scheme": "internet-facing",
+          "Type": "network",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/net/ALB-OK/782c9ddd7907ccdd",
+          "LoadBalancerName": "ALB-OK",
+          "Scheme": "internet-facing",
+          "Type": "network",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/app/ALB-lkowalczuk/72e0af376dcfec9d",
+          "LoadBalancerName": "ALB-lkowalczuk",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:061670163066:loadbalancer/app/tetris-alb/cf0a8732fde52184",
+          "LoadBalancerName": "tetris-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/net/ALB-OK/782c9ddd7907ccdd",
+          "LoadBalancerName": "ALB-OK",
+          "Scheme": "internet-facing",
+          "Type": "network",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/net/ALB-OK-lkowalczuk/aeed836e04a20553",
+          "LoadBalancerName": "ALB-OK-lkowalczuk",
+          "Scheme": "internet-facing",
+          "Type": "network",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/app/To-RDS-lkowalczuk/b201f1bfdd4f3dab",
+          "LoadBalancerName": "To-RDS-lkowalczuk",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/net/network-to-ecs-RDS-Lkow/1d63426787cd28d1",
+          "LoadBalancerName": "network-to-ecs-RDS-Lkow",
+          "Scheme": "internet-facing",
+          "Type": "network",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/app/ALB-lkowalczuk/85d3065695150ff6",
+          "LoadBalancerName": "ALB-lkowalczuk",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-3:890769921003:loadbalancer/app/ALB-lkowalczuk/216e4f9c16f11408",
+          "LoadBalancerName": "ALB-lkowalczuk",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        }
+      ]
+    },
+    {
+      "Region": "eu-west-1",
+      "LoadBalancers": [
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:417754270324:loadbalancer/app/ak-alb-poc-llm/ece8e52a1e4f7ca6",
+          "LoadBalancerName": "ak-alb-poc-llm",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:183631325163:loadbalancer/app/geotpoc-auto-alb-main/07dc88d6fb516591",
+          "LoadBalancerName": "geotpoc-auto-alb-main",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:183631325163:loadbalancer/app/geot-sbx-public-alb/ad4ea26b064f0645",
+          "LoadBalancerName": "geot-sbx-public-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/361d1755296a9ff9",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/1ea1ae7fb78ffb7f",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-dev-alb/f95966ff70c9d203",
+          "LoadBalancerName": "krawski-dev-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-dev-alb/72636ffdde73cfef",
+          "LoadBalancerName": "krawski-dev-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/ce89072739908e70",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/5125dc87cf5b49ed",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/fb38e622e62c599e",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/4387423951224d72",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/ddcacd4f7dea05cc",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/1053931024daa7f4",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/4e9e1a786ad88323",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/012da7cb62039d74",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/9ef5412f295ef70e",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/f842b4330fc87daf",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/da4ab82135b98a8c",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/f44a7e76d9732433",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/773c9368736b0ebb",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/4392b5a68291e16c",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-prod-alb/42b588de78340ae6",
+          "LoadBalancerName": "krawski-prod-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:417754270324:loadbalancer/app/ak-alb-poc-llm/ece8e52a1e4f7ca6",
+          "LoadBalancerName": "ak-alb-poc-llm",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:183631325163:loadbalancer/app/geot-sbx-public-alb/ad4ea26b064f0645",
+          "LoadBalancerName": "geot-sbx-public-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-dev-alb/72636ffdde73cfef",
+          "LoadBalancerName": "krawski-dev-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/f44a7e76d9732433",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/9ef5412f295ef70e",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/4387423951224d72",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/fb38e622e62c599e",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-dev-alb/f95966ff70c9d203",
+          "LoadBalancerName": "krawski-dev-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/ce89072739908e70",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/361d1755296a9ff9",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/1ea1ae7fb78ffb7f",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/f842b4330fc87daf",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/da4ab82135b98a8c",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/4392b5a68291e16c",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-prod-alb/42b588de78340ae6",
+          "LoadBalancerName": "krawski-prod-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/ddcacd4f7dea05cc",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-west-1:890769921003:loadbalancer/app/krawski-default-alb/4e9e1a786ad88323",
+          "LoadBalancerName": "krawski-default-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        }
+      ]
+    },
+    {
+      "Region": "us-east-1",
+      "LoadBalancers": [
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1:417754270324:loadbalancer/app/app-lb/e68793179fbd4e95",
+          "LoadBalancerName": "app-lb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1:417754270324:loadbalancer/app/dev-xmod-lb/aefe2c5d23037f81",
+          "LoadBalancerName": "dev-xmod-lb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1:417754270324:loadbalancer/app/prod-xmod-lb/2e2739ddd7df50e0",
+          "LoadBalancerName": "prod-xmod-lb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1:417754270324:loadbalancer/app/dev-xmod-lb/3434cca696015140",
+          "LoadBalancerName": "dev-xmod-lb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1:417754270324:loadbalancer/app/app-lb/e68793179fbd4e95",
+          "LoadBalancerName": "app-lb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1:417754270324:loadbalancer/app/prod-xmod-lb/2e2739ddd7df50e0",
+          "LoadBalancerName": "prod-xmod-lb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1:417754270324:loadbalancer/app/dev-xmod-lb/aefe2c5d23037f81",
+          "LoadBalancerName": "dev-xmod-lb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1:417754270324:loadbalancer/app/dev-xmod-lb/3434cca696015140",
+          "LoadBalancerName": "dev-xmod-lb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        }
+      ]
+    },
+    {
+      "Region": "eu-central-1",
+      "LoadBalancers": [
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-central-1:417754270324:loadbalancer/app/xaia-ai-dev/673ddb282fde3f59",
+          "LoadBalancerName": "xaia-ai-dev",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-central-1:417754270324:loadbalancer/app/xaia-ai-prod/0ae67d33954f2b66",
+          "LoadBalancerName": "xaia-ai-prod",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-central-1:842747873158:loadbalancer/app/Bedroc-Proxy-HnegKHBZTaGm/739f49e5a8ff843a",
+          "LoadBalancerName": "Bedroc-Proxy-HnegKHBZTaGm",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-central-1:842747873158:loadbalancer/app/breeze-ai-alb/56fa3f99addef871",
+          "LoadBalancerName": "breeze-ai-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-central-1:417754270324:loadbalancer/app/xaia-ai-dev/673ddb282fde3f59",
+          "LoadBalancerName": "xaia-ai-dev",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-central-1:417754270324:loadbalancer/app/xaia-ai-prod/0ae67d33954f2b66",
+          "LoadBalancerName": "xaia-ai-prod",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-central-1:842747873158:loadbalancer/app/Bedroc-Proxy-HnegKHBZTaGm/739f49e5a8ff843a",
+          "LoadBalancerName": "Bedroc-Proxy-HnegKHBZTaGm",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        },
+        {
+          "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-central-1:842747873158:loadbalancer/app/breeze-ai-alb/56fa3f99addef871",
+          "LoadBalancerName": "breeze-ai-alb",
+          "Scheme": "internet-facing",
+          "Type": "application",
+          "VpcId": "vpc-unknown",
+          "AvailabilityZones": [],
+          "CreatedTime": "2024-01-01T00:00:00+00:00",
+          "SecurityGroups": []
+        }
+      ]
+    }
+  ]
+}
