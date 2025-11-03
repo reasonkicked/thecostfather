@@ -27,6 +27,8 @@ pip install -r requirements.txt
 
 # inside your venv
 pip install duckdb>=1.0.0
+export AWS_DEFAULT_PROFILE=805621301265_AdministratorAccess
+export AWS_DEFAULT_REGION=eu-west-1
 
 
 python tools/cur_to_fixture.py --cur-dir cur_raw --fixtures-dir fixtures --synthesize-lb-fixtures
@@ -40,4 +42,16 @@ python tools/identify_idle_elb.py \
   --cost-threshold 0 \
   --output out/idle_elb_online.csv
 Wrote 0 idle LBs → out/idle_elb_online.csv
+
+
+python tools/regions_from_cur.py --min-monthly-cost 0 > .regions.txt
+cat .regions.txt
+
+python tools/identify_idle_elb.py \
+  --regions $(cat .regions.txt) \
+  --cost-from-fixture fixtures/athena_cost.csv \
+  --account-map fixtures/accounts.csv \
+  --lookback-hours 336 \
+  --cost-threshold 0 \
+  --output out/idle_elb_online.csv
 
